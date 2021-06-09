@@ -14,8 +14,8 @@
   <tbody>
     <% @usuario_cargos.each do |usuario_cargo| %>
       <tr>
-        <td><%= usuario_cargo.usuario_id %></td>
-        <td><%= usuario_cargo.cargo_id %></td>
+        <td><%= usuario_cargo.usuario.nome %></td>
+        <td><%= usuario_cargo.cargo.nome %></td>
         <td><%= link_to 'Show', usuario_cargo %></td>
         <td><%= link_to 'Edit', edit_usuario_cargo_path(usuario_cargo) %></td>
         <td><%= link_to 'Destroy', usuario_cargo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
