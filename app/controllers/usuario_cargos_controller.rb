@@ -59,7 +59,7 @@ class UsuarioCargosController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_usuario_cargo
-      @usuario_cargo = UsuarioCargo.find(params[:id])
+      @usuario_cargo = UsuarioCargo.where("id = ?", params[:id]).first
     end
 
     # Only allow a list of trusted parameters through.
