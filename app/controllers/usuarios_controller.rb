@@ -1,9 +1,11 @@
 class UsuariosController < ApplicationController
   before_action :set_usuario, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /usuarios or /usuarios.json
   def index
     @usuarios = Usuario.all
+    @users = User.all
   end
 
   # GET /usuarios/1 or /usuarios/1.json
