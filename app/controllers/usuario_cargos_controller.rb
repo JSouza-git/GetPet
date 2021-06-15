@@ -1,5 +1,6 @@
 class UsuarioCargosController < ApplicationController
   before_action :set_usuario_cargo, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /usuario_cargos or /usuario_cargos.json
   def index
