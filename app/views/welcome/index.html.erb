@@ -71,6 +71,8 @@ footer {
 <body>
 <header>
   <h2><a href='https://getpet-es.herokuapp.com'>Get Pet</a></h2>
+
+
 </header>
 
 <section id='body'>
@@ -90,7 +92,25 @@ footer {
       Sistema de gerenciamento de serviços para petshop.<br><br>
       O sistema provê métodos para gerenciamento de horários de serviços e funcionários, de forma a auxiliar a administração.<br>
       Os usuários do sistema Get Pet podem cadastrar novos pets, agendar serviços, e gerenciar horários dos serviços.<br>
-    
+
     </p>
+
+    <ul>
+      <li><%= link_to 'Cadastrar usuário', new_usuario_path%></li>
+      <li><%= link_to 'Cadastrar cargo', new_cargo_path %></li>
+      <li><%= link_to 'Cadastrar usuario em um cargo', new_usuario_cargo_path %></li>
+    </ul>
+
+    <% if user_signed_in? %>
+    <ul>
+      <li><%= current_user.email %></li>
+      <li><%= link_to 'Sair', destroy_user_session_path, method: :delete %></li>
+    </ul>
+    <% else %>
+      <ul>
+        <li><%= link_to 'Cadastro de um novo usuário', new_user_registration_path %></li>
+        <li><%= link_to 'Logar', new_user_session_path%></li>
+      </ul>
+    <% end %>
   </article>
 </section>
