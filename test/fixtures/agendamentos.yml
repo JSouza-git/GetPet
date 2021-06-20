@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pet: one
+  servico: one
+  usuario: one
+  data: MyString
+  observacao: MyText
+
+two:
+  pet: two
+  servico: two
+  usuario: two
+  data: MyString
+  observacao: MyText

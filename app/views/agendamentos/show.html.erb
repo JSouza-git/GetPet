@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pet:</strong>
+  <%= @agendamento.pet_id %>
+</p>
+
+<p>
+  <strong>Servico:</strong>
+  <%= @agendamento.servico_id %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @agendamento.usuario_id %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @agendamento.data %>
+</p>
+
+<p>
+  <strong>Observacao:</strong>
+  <%= @agendamento.observacao %>
+</p>
+
+<%= link_to 'Edit', edit_agendamento_path(@agendamento) %> |
+<%= link_to 'Back', agendamentos_path %>
