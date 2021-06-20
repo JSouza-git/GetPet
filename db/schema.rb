@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_20_154859) do
+ActiveRecord::Schema.define(version: 2021_06_20_190337) do
 
   create_table "cargos", force: :cascade do |t|
     t.string "nome"
@@ -18,6 +18,27 @@ ActiveRecord::Schema.define(version: 2021_06_20_154859) do
     t.string "permissao"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "clientes", force: :cascade do |t|
+    t.string "nome"
+    t.string "endereco"
+    t.string "telefone"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "pets", force: :cascade do |t|
+    t.string "nome"
+    t.string "raca"
+    t.string "cor"
+    t.string "idade"
+    t.string "porte"
+    t.text "observacao"
+    t.integer "cliente_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["cliente_id"], name: "index_pets_on_cliente_id"
   end
 
   create_table "servicos", force: :cascade do |t|
@@ -60,6 +81,7 @@ ActiveRecord::Schema.define(version: 2021_06_20_154859) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "pets", "clientes"
   add_foreign_key "usuario_cargos", "cargos"
   add_foreign_key "usuario_cargos", "usuarios"
 end
