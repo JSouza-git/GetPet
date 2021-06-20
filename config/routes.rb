@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :servicos
   devise_for :users
   resources :usuario_cargos
   resources :cargos
