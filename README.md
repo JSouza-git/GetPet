@@ -16,3 +16,9 @@ Orientado pelo professor Rodrigo Cardoso Amaral de Andrade.
 Engenharia de Software - BCC - UFAPE.
 
 *   [Site no Heroku](https://getpet-es.herokuapp.com)
+
+
+## Informações de Execução do cucumber
+ - rails generate rspec:install
+ - rails db:migrate RAILS_ENV=test
+ - bundle exec rails webpacker:install  
