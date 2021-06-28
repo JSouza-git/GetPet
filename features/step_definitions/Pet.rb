@@ -6,7 +6,7 @@ end
 Given('Eu clico no botao new Pet') do
   click_link 'New Pet'
 end
-When('Eu preencho o campo nome com {string} o campo raca com {string} o campo cor com {string} o campo idade com {string} o campo porte com {string} o campo observacao com {string} e o campo cliente com {int}') do |nome, raca, cor, idade, porte, observacao, cliente|
+When('Eu preencho o campo nome com {string} o campo raca com {string} o campo cor com {string} o campo idade com {string} o campo porte com {string} o campo observacao com {string} e o campo cliente com {int}') do |nome, raca, cor, idade, porte, observacao, _cliente|
   fill_in 'pet[nome]', with: nome
   fill_in 'pet[raca]', with: raca
   fill_in 'pet[cor]', with: cor

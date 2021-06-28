@@ -59,7 +59,7 @@ class PetsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_pet
-      @pet = Pet.find(params[:id])
+      @pet = Pet.where("id = ?", params[:id]).first
     end
 
     # Only allow a list of trusted parameters through.
