@@ -96,9 +96,12 @@ footer {
     </p>
 
     <ul>
-      <li><%= link_to 'Cadastrar usuário', new_usuario_path%></li>
+      <li><%= link_to 'Cadastrar usuario', new_usuario_path%></li>
       <li><%= link_to 'Cadastrar cargo', new_cargo_path %></li>
+      <li><%= link_to 'Cadastrar pet', new_pet_path %></li>
+      <li><%= link_to 'Cadastrar cliente', new_cliente_path %></li>
       <li><%= link_to 'Cadastrar usuario em um cargo', new_usuario_cargo_path %></li>
+      <li><%= link_to 'Cadastrar servico', new_servico_path %></li>
     </ul>
 
     <% if user_signed_in? %>
