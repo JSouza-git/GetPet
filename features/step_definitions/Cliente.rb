@@ -1,4 +1,3 @@
-
 # novo cliente
 Given('Eu estou na pagina de clientes') do
   visit 'clientes/'
@@ -19,7 +18,7 @@ When('Eu clico em Create Cliente') do
 end
 
 Then('Eu vejo uma mensagem informando que o cliente foi salvo com sucesso') do   
-  expect(page).to have_content('successfully')  
+  expect(page).to have_content('Cliente was successfully created.')
 end
 
 When('Eu preencho o campo endereco com {string} e o campo telefone com  {string}') do |endereco, telefone|
