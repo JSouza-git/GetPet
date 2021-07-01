@@ -27,16 +27,17 @@ body {
   text-align: right;
 }
 
-.text-j{
+.text-j {
   text-align: justify;
 }
 
-.text-whitesmoke{
+.text-whitesmoke {
   text-transform: uppercase;
   font-size: 28px;
+  color: whitesmoke;
 }
 
-#label_password{
+#label_password {
   margin-top: 20px;
   color: white;
 }
@@ -46,7 +47,7 @@ body {
   color: white;
 }
 
-.actions input{
+.actions input {
   margin-top: 40px;
   padding: 8px 12px;
   font-size: 16px;
@@ -55,8 +56,8 @@ body {
 }
 
 input:focus {
-  transition: .2s;
-  font-size: 18px;  
+  transition: 0.2s;
+  font-size: 18px;
 }
 
 input:hover {
@@ -73,7 +74,7 @@ input:hover {
   border: 1px solid #424242;
 }
 
-#user_password {  
+#user_password {
   border-radius: 5px;
   margin-top: 20px;
   text-align: center;
@@ -91,12 +92,8 @@ input:hover {
   border: 1px solid #424242;
 }
 
-.text-whitesmoke {
-  color: whitesmoke;
-}
-
 .text-darkyellow {
-  color: rgba(255, 235, 59, 0.432)
+  color: rgba(255, 235, 59, 0.432);
 }
 
 /* Lines */
@@ -227,21 +224,21 @@ input:hover {
   width: 100%;
 }
 
+.form-control::-webkit-input-placeholder {
+  color: #bdbdbd; 
+}
+
+.form-control,
+.form-control:focus {
+  box-shadow: none;
+}
+
 .form-control,
 .form-control:focus,
 .border-line:focus {
   border-color: #ffeb3b;
   background-color: #616161;
   color: #e6e6e6;
-}
-
-.form-control::-webkit-input-placeholder { 
-    color: #bdbdbd; 
-}
-
-.form-control,
-.form-control:focus {
-  box-shadow: none;
 }
 
 /* Container */
