@@ -210,6 +210,19 @@ input:hover {
   margin-bottom: 30px;
 }
 
+.form-control::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+.form-control,
+.form-control:focus,
+.border-line:focus {
+  border-color: #ffeb3b;
+  background-color: #616161;
+  color: #e6e6e6;
+  box-shadow: none;
+}
+
 /* Bootstrap Form Control Extension */
 .form-control,
 .border-line {
@@ -222,19 +235,6 @@ input:hover {
   padding: 6px 12px;
   transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
   width: 100%;
-}
-
-.form-control::-webkit-input-placeholder {
-  color: #bdbdbd;
-}
-
-.form-control,
-.form-control:focus,
-.border-line:focus {
-  border-color: #ffeb3b;
-  background-color: #616161;
-  color: #e6e6e6;
-  box-shadow: none;
 }
 
 /* Container */
