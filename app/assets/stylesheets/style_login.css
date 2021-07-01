@@ -61,8 +61,8 @@ input:focus {
 }
 
 input:hover {
-  transition: .2s;
-  font-size: 18px;  
+  transition: 0.2s;
+  font-size: 18px;
 }
 
 #user_email {
@@ -225,12 +225,7 @@ input:hover {
 }
 
 .form-control::-webkit-input-placeholder {
-  color: #bdbdbd; 
-}
-
-.form-control,
-.form-control:focus {
-  box-shadow: none;
+  color: #bdbdbd;
 }
 
 .form-control,
@@ -239,6 +234,7 @@ input:hover {
   border-color: #ffeb3b;
   background-color: #616161;
   color: #e6e6e6;
+  box-shadow: none;
 }
 
 /* Container */
