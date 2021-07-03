@@ -9,7 +9,10 @@
     <div class="container-content">
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="form-group field">
-          <%= f.email_field :email, autofocus: true, placeholder:"Email", autocomplete: "email"%>
+          <%= f.email_field :email, autofocus: true, placeholder:"Email", autocomplete: "email"%>  
+          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+            <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+          <% end %>
         </div>
       
         <div class="form-group field">
@@ -19,6 +22,9 @@
           <%= f.submit "Entrar" %>
         </div>
       <% end %>
+      <div class="form-group field">    
+        <%= link_to "Back", :back %>
+      </div>
     </div>
   </div>
 </body>
