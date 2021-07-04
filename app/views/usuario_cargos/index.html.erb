@@ -1,33 +1,38 @@
+<%= stylesheet_link_tag "style_padrao_visualizar.css" %>
 <%= render 'header'  %>
 
 <p id="notice"><%= notice %></p>
 
-<h1>Usuario Cargos</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Usuario</th>
-      <th>Cargo</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @usuario_cargos.each do |usuario_cargo| %>
+<h1 class="title-table">Cargos dos Usuários</h1>
+<div class="table-wrapper">
+  <table class="fl-table">
+    <thead>
       <tr>
-        <td><%= usuario_cargo.usuario.nome %></td>
-        <td><%= usuario_cargo.cargo.nome %></td>
-        <td><%= link_to 'Show', usuario_cargo %></td>
-        <td><%= link_to 'Edit', edit_usuario_cargo_path(usuario_cargo) %></td>
-        <td><%= link_to 'Destroy', usuario_cargo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Usuario</th>
+        <th>Cargo</th>
+        <th colspan="3">Ações</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-
-<%= link_to 'New Usuario Cargo', new_usuario_cargo_path %>
-
+    <tbody>
+      <% @usuario_cargos.each do |usuario_cargo| %>
+        <tr>
+          <td><%= usuario_cargo.usuario.nome %></td>
+          <td><%= usuario_cargo.cargo.nome %></td>
+          <td><%= link_to 'Show', usuario_cargo %></td>
+          <td><%= link_to 'Edit', edit_usuario_cargo_path(usuario_cargo) %></td>
+          <td><%= link_to 'Destroy', usuario_cargo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+      <tr>
+        <td><%= link_to 'Novo Cargo para o usuário', new_usuario_cargo_path %></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+<div>
 <%= render 'footer'  %>

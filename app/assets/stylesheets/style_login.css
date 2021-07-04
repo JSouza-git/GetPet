@@ -53,7 +53,7 @@ body {
   padding: 8px 12px;
   font-size: 16px;
   border-radius: 15%;
-  background-color: #316879;
+  background-color: #807182;
   color: #cfcfcf;
 }
 
@@ -243,10 +243,10 @@ input:hover {
 
 /* Container */
 .container-content {
-  background-color: #f47a60;
+  background-color: #F7B1AB;
   color: inherit;
   padding: 15px 20px 20px 20px;
-  border-color: #316879;  
+  border-color: #807182;  
   border-image: none;
   border-style: solid solid none;
   border-width: 10px 0;
@@ -255,7 +255,7 @@ input:hover {
 
 /* Backgrounds */
 .main-bg {
-  background: #ced7d8;
+  background: #D8AA96;
 }
 
 /* Login & Register Pages */
