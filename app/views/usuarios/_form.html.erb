@@ -1,37 +1,44 @@
-<%= form_with(model: usuario) do |form| %>
-  <% if usuario.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(usuario.errors.count, "error") %> prohibited this usuario from being saved:</h2>
+<%= stylesheet_link_tag "style_padrao_novo.css" %>
+<body class="main-bg">
+  <div class="login-container text-c animated flipInX">
+    <div class="container-content">
+      <%= form_with(model: usuario) do |form| %>
+        <% if usuario.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(usuario.errors.count, "error") %> prohibited this usuario from being saved:</h2>
 
-      <ul>
-        <% usuario.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+            <ul>
+              <% usuario.errors.each do |error| %>
+                <li><%= error.full_message %></li>
+              <% end %>
+            </ul>
+          </div>
         <% end %>
-      </ul>
+
+        <div class="field">
+          <%= form.text_field :nome,placeholder:"Nome do usuário" %>
+        </div>
+
+        <div class="field">
+          <%= form.text_field :email,placeholder:"Email do usuário" %>
+        </div>
+
+        <div class="field">
+          <%= form.text_field :senha,placeholder:"Senha do usuário" %>
+        </div>
+
+        <div class="field">
+          <%= form.text_field :telefone,placeholder:"Telefone do usuário" %>
+        </div>
+
+        <div class="actions">
+          <%= form.submit %>
+        </div>
+      <% end %>
+      <div class="form-group field">    
+        <%= link_to "Voltar", :back %>
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :nome %>
-    <%= form.text_field :nome %>
   </div>
+</body>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :senha %>
-    <%= form.text_field :senha %>
-  </div>
-
-  <div class="field">
-    <%= form.label :telefone %>
-    <%= form.text_field :telefone %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>

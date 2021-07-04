@@ -1,32 +1,39 @@
-<%= form_with(model: cliente) do |form| %>
-  <% if cliente.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(cliente.errors.count, "error") %> prohibited this cliente from being saved:</h2>
+<%= stylesheet_link_tag "style_padrao_novo.css" %>
+<body class="main-bg">
+  <div class="login-container text-c animated flipInX">
+    <div class="container-content">
+      <%= form_with(model: cliente) do |form| %>
+        <% if cliente.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(cliente.errors.count, "error") %> prohibited this cliente from being saved:</h2>
 
-      <ul>
-        <% cliente.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+            <ul>
+              <% cliente.errors.each do |error| %>
+                <li><%= error.full_message %></li>
+              <% end %>
+            </ul>
+          </div>
         <% end %>
-      </ul>
+
+        <div class="field">
+          <%= form.text_field :nome,placeholder:"Nome do cliente" %>
+        </div>
+
+        <div class="field">
+          <%= form.text_field :endereco,placeholder:"Endereço do cliente" %>
+        </div>
+
+        <div class="field">
+          <%= form.text_field :telefone,placeholder:"Telefone do cliente" %>
+        </div>
+
+        <div class="actions">
+          <%= form.submit %>
+        </div>
+      <% end %>
+      <div class="form-group field">    
+        <%= link_to "Voltar", :back %>
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :nome %>
-    <%= form.text_field :nome %>
   </div>
-
-  <div class="field">
-    <%= form.label :endereco %>
-    <%= form.text_field :endereco %>
-  </div>
-
-  <div class="field">
-    <%= form.label :telefone %>
-    <%= form.text_field :telefone %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</body>

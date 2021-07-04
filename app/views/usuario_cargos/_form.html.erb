@@ -1,27 +1,36 @@
-<%= form_with(model: usuario_cargo) do |form| %>
-  <% if usuario_cargo.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(usuario_cargo.errors.count, "error") %> prohibited this usuario_cargo from being saved:</h2>
+<%= stylesheet_link_tag "style_padrao_novo.css" %>
+<body class="main-bg">
+  <div class="login-container text-c animated flipInX">
+    <div class="container-content">
+      <%= form_with(model: usuario_cargo) do |form| %>
+        <% if usuario_cargo.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(usuario_cargo.errors.count, "error") %> prohibited this usuario_cargo from being saved:</h2>
 
-      <ul>
-        <% usuario_cargo.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+            <ul>
+              <% usuario_cargo.errors.each do |error| %>
+                <li><%= error.full_message %></li>
+              <% end %>
+            </ul>
+          </div>
         <% end %>
-      </ul>
+
+        <div class="field">
+          <%= form.collection_select(:usuario_id, Usuario.all, :id, :nome, prompt: "Selecione o usuário") %>
+        </div>
+
+        <div class="field">
+          <%= form.collection_select(:cargo_id, Cargo.all, :id, :nome, prompt: "Selecione o cargo") %>
+        </div>
+
+        <div class="actions">
+          <%= form.submit %>
+        </div>
+      <% end %>
+      <div class="form-group field">    
+        <%= link_to "Voltar", :back %>
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :usuario_id %>
-    <%= form.collection_select(:usuario_id, Usuario.all, :id, :nome, prompt: true) %>
   </div>
+</body>
 
-  <div class="field">
-    <%= form.label :cargo_id %>
-    <%= form.collection_select(:cargo_id, Cargo.all, :id, :nome, prompt: true) %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>

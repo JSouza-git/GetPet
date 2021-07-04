@@ -1,42 +1,47 @@
-<%= form_with(model: servico) do |form| %>
-  <% if servico.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(servico.errors.count, "error") %> prohibited this servico from being saved:</h2>
+<%= stylesheet_link_tag "style_padrao_novo.css" %>
+<body class="main-bg">
+  <div class="login-container text-c animated flipInX">
+      <div class="container-content">
+        <%= form_with(model: servico) do |form| %>
+          <% if servico.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(servico.errors.count, "error") %> prohibited this servico from being saved:</h2>
 
-      <ul>
-        <% servico.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+              <ul>
+                <% servico.errors.each do |error| %>
+                  <li><%= error.full_message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <div class="field">
+            <%= form.text_field :nome,placeholder:"Nome do serviço" %>
+          </div>
+
+          <div class="field">
+            <%= form.text_area :descricao,placeholder:"Descrição do serviço" %>
+          </div>
+
+          <div class="field">
+            <%= form.select(:duracao, [['Duração',],['30 minutos',30], ['60 minutos',60]])%>
+          </div>
+
+          <div class="field">
+            <%= form.select(:valor, [['Preço',],['R$ 25,00',25], ['R$ 50,00',50]]) %>
+          </div>
+
+          <div class="field">
+            <%= form.text_area :observacoes,placeholder:"Observações do serviço" %>
+          </div>
+
+          <div class="actions">
+            <%= form.submit %>
+          </div>
         <% end %>
-      </ul>
+        <div class="form-group field">    
+          <%= link_to "Voltar", :back %>
+        </div>
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :nome %>
-    <%= form.text_field :nome %>
-  </div>
-
-  <div class="field">
-    <%= form.label :descricao %>
-    <%= form.text_area :descricao %>
-  </div>
-
-  <div class="field">
-    <%= form.label :duracao %>
-    <%= form.select(:duracao, [['',],['30 minutos',30], ['60 minutos',60]]) %>
-  </div>
-
-  <div class="field">
-    <%= form.label :valor %>
-    <%= form.select(:valor, [['',],['R$ 25,00',25], ['R$ 50,00',50]]) %>
-  </div>
-
-  <div class="field">
-    <%= form.label :observacoes %>
-    <%= form.text_area :observacoes %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+  </body>
