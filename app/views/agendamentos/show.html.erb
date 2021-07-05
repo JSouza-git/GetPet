@@ -1,33 +1,43 @@
+<%= stylesheet_link_tag "style_padrao_novo.css" %>
+<%= stylesheet_link_tag "style_padrao_visualizar.css" %>
+
 <%= render 'header'  %>
+<h1 class="text-whitesmoke">Agendamento</h1>
+<body class="main-bg">
+  <div class="login-container text-c animated flipInX">
+    <div class="container-content">
+      <%= form_with() do |form| %>
+        <div class="field">        
+          <strong>Pet:</strong><br>
+          <%= form.text_field :pet,value: @agendamento.pet.nome,:disabled => true  %>
+        </div>
 
-<p id="notice"><%= notice %></p>
+        <div class="field">        
+          <strong>Serviço:</strong><br>
+          <%= form.text_field :servico,value: @agendamento.servico.nome,:disabled => true  %>
+        </div>
 
-<p>
-  <strong>Pet:</strong>
-  <%= @agendamento.pet_id %>
-</p>
+        <div class="field">        
+          <strong>Responsável:</strong><br>
+          <%= form.text_field :usuario,value: @agendamento.usuario.nome,:disabled => true  %>
+        </div>
 
-<p>
-  <strong>Servico:</strong>
-  <%= @agendamento.servico_id %>
-</p>
+        <div class="field">        
+          <strong>Data:</strong><br>
+          <%= form.text_field :data,value: @agendamento.data,:disabled => true  %>
+        </div>
 
-<p>
-  <strong>Usuario:</strong>
-  <%= @agendamento.usuario_id %>
-</p>
+        <div class="field">        
+          <strong>Observação:</strong><br>
+          <%= form.text_area :observacao,value: @agendamento.observacao,:disabled => true  %>
+        </div>
 
-<p>
-  <strong>Data:</strong>
-  <%= @agendamento.data %>
-</p>
-
-<p>
-  <strong>Observacao:</strong>
-  <%= @agendamento.observacao %>
-</p>
-
-<%= link_to 'Edit', edit_agendamento_path(@agendamento) %> |
-<%= link_to 'Back', agendamentos_path %>
+      <% end %>
+      <div class="form-group field">    
+        <%= link_to "Voltar", :back %>
+      </div>
+    </div>
+  </div>
+</body>
 
 <%= render 'footer'  %>

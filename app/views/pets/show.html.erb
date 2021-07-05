@@ -1,43 +1,52 @@
+<%= stylesheet_link_tag "style_padrao_novo.css" %>
+<%= stylesheet_link_tag "style_padrao_visualizar.css" %>
+
 <%= render 'header'  %>
+<h1 class="text-whitesmoke">Pet</h1>
+<body class="main-bg">
+  <div class="login-container text-c animated flipInX">
+    <div class="container-content">
+      <%= form_with() do |form| %>
+        <div class="field">        
+          <strong>Nome:</strong><br>
+          <%= form.text_field :nome,value: @pet.nome,:disabled => true  %>
+        </div>
 
-<p id="notice"><%= notice %></p>
+        <div class="field">
+          <strong>Raça:</strong><br>
+          <%= form.text_field :raca,value: @pet.raca,:disabled => true %>
+        </div>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @pet.nome %>
-</p>
+        <div class="field">
+          <strong>Cor:</strong><br>
+          <%= form.text_field :cor,value: @pet.cor,:disabled => true %>
+        </div>
 
-<p>
-  <strong>Raca:</strong>
-  <%= @pet.raca %>
-</p>
+        <div class="field">
+          <strong>Idade:</strong><br>
+          <%= form.text_field :idade,value: @pet.idade+' anos',:disabled => true %>
+        </div>
 
-<p>
-  <strong>Cor:</strong>
-  <%= @pet.cor %>
-</p>
+        <div class="field">
+          <strong>Porte:</strong><br>
+          <%= form.text_field :porte,value: @pet.porte,:disabled => true %>
+        </div>
 
-<p>
-  <strong>Idade:</strong>
-  <%= @pet.idade %>
-</p>
+        <div class="field">        
+          <strong>Observação:</strong><br>
+          <%= form.text_area :observacao,value: @pet.observacao,:disabled => true  %>
+        </div>
 
-<p>
-  <strong>Porte:</strong>
-  <%= @pet.porte %>
-</p>
-
-<p>
-  <strong>Observacao:</strong>
-  <%= @pet.observacao %>
-</p>
-
-<p>
-  <strong>Cliente:</strong>
-  <%= @pet.cliente_id %>
-</p>
-
-<%= link_to 'Edit', edit_pet_path(@pet) %> |
-<%= link_to 'Back', pets_path %>
+        <div class="field">
+          <strong>Cliente:</strong><br>
+          <%= form.text_field :cliente,value: @pet.cliente.nome,:disabled => true %>
+        </div>
+      <% end %>
+      <div class="form-group field">    
+        <%= link_to "Voltar", :back %>
+      </div>
+    </div>
+  </div>
+</body>
 
 <%= render 'footer'  %>

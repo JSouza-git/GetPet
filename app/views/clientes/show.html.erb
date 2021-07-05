@@ -1,23 +1,32 @@
+<%= stylesheet_link_tag "style_padrao_novo.css" %>
+<%= stylesheet_link_tag "style_padrao_visualizar.css" %>
+
 <%= render 'header'  %>
+<h1 class="text-whitesmoke">Cliente</h1>
+<body class="main-bg">
+  <div class="login-container text-c animated flipInX">
+    <div class="container-content">
+      <%= form_with() do |form| %>
+        <div class="field">        
+          <strong>Nome:</strong><br>
+          <%= form.text_field :nome,value: @cliente.nome,:disabled => true  %>
+        </div>
 
-<p id="notice"><%= notice %></p>
+        <div class="field">        
+          <strong>Endereço:</strong><br>
+          <%= form.text_area :endereco,value: @cliente.endereco,:disabled => true  %>
+        </div>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @cliente.nome %>
-</p>
-
-<p>
-  <strong>Endereco:</strong>
-  <%= @cliente.endereco %>
-</p>
-
-<p>
-  <strong>Telefone:</strong>
-  <%= @cliente.telefone %>
-</p>
-
-<%= link_to 'Edit', edit_cliente_path(@cliente) %> |
-<%= link_to 'Back', clientes_path %>
+        <div class="field">
+          <strong>Telefone:</strong><br>
+          <%= form.text_field :telefone,value: @cliente.telefone,:disabled => true %>
+        </div>
+      <% end %>
+      <div class="form-group field">    
+        <%= link_to "Voltar", :back %>
+      </div>
+    </div>
+  </div>
+</body>
 
 <%= render 'footer'  %>
