@@ -50,15 +50,6 @@ body {
   color: white;
 }
 
-.actions input {
-  margin-top: 40px;
-  padding: 8px 12px;
-  font-size: 16px;
-  border-radius: 15%;
-  background-color: #807182;
-  color: #cfcfcf;
-}
-
 textarea {
   border-radius: 5px;
   margin-top: 10px;
@@ -104,7 +95,16 @@ input:hover {
   font-size: 18px;
 }
 
-.field_with_errors{
+.actions input {
+  margin-top: 40px;
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 15%;
+  background-color: #807182;
+  color: #cfcfcf;
+}
+
+.field_with_errors {
   margin: auto;
 }
 
@@ -113,7 +113,7 @@ input:hover {
   width: 300px;
 }
 
-.actions input[type='submit']{  
+.actions input[type='submit'] {  
   width: auto;
   padding: 6px 12px;
   font-size: 12px;
@@ -121,7 +121,7 @@ input:hover {
   background-color: #324960;
 }
 
-.actions input[type='submit']:hover{  
+.actions input[type='submit']:hover {  
   background-color: #1a2530;
   color: white;
 }
