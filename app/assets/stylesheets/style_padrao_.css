@@ -76,12 +76,6 @@ h2 {
     padding: 0 0 10px;
   }
 
-  .fl-table thead,
-  .fl-table tbody,
-  .fl-table thead th {
-    display: block;
-  }
-
   .fl-table td,
   .fl-table th {
     padding: 20px 0.625em 0.625em 0.625em;
@@ -93,6 +87,17 @@ h2 {
     width: 120px;
     font-size: 13px;
     text-overflow: ellipsis;
+  }
+
+  .fl-table thead,
+  .fl-table tbody,
+  .fl-table thead th {
+    display: block;
+  }
+
+  .fl-table thead th {
+    text-align: left;
+    border-bottom: 1px solid #f7f7f9;
   }
 
   .fl-table thead th:last-child {
@@ -107,11 +112,6 @@ h2 {
     width: auto;
     position: relative;
     overflow-x: auto;
-  }
-  
-  .fl-table thead th {
-    text-align: left;
-    border-bottom: 1px solid #f7f7f9;
   }
 
   .fl-table tbody tr {
