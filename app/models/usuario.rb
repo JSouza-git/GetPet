@@ -1,2 +1,4 @@
-class Usuario < ApplicationRecord
+class Usuario < ApplicationRecord    
+  validates :nome, presence: true   
+  validates :email, presence: true   
 end
