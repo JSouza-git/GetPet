@@ -108,12 +108,12 @@ input:hover {
   margin: auto;
 }
 
-#error_explanation{
+#error_explanation {
   margin: auto;
   width: 300px;
 }
 
-.actions input[type='submit'] {  
+.actions input[type='submit'] {
   width: auto;
   padding: 6px 12px;
   font-size: 12px;
@@ -121,7 +121,7 @@ input:hover {
   background-color: #324960;
 }
 
-.actions input[type='submit']:hover {  
+.actions input[type='submit']:hover {
   background-color: #1a2530;
   color: white;
 }
