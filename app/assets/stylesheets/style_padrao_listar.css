@@ -91,17 +91,7 @@ h2 {
   .fl-table thead {
     float: left;
   }
-
-  .fl-table thead th:last-child {
-    border-bottom: none;
-  }
-
-  .fl-table tbody {
-    width: auto;
-    position: relative;
-    overflow-x: auto;
-  }
-
+    
   .fl-table td,
   .fl-table th {
     padding: 20px 0.625em 0.625em 0.625em;
@@ -120,6 +110,16 @@ h2 {
     border-bottom: 1px solid #f7f7f9;
   }
 
+  .fl-table thead th:last-child {
+    border-bottom: none;
+  }
+
+  .fl-table tbody {
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+  }
+
   .fl-table tbody tr {
     display: table-cell;
   }
@@ -136,13 +136,13 @@ h2 {
     border-right: 1px solid #e6e4e4;
   }
 
-  .fl-table tr td:nth-child(odd) {
-    background: #f8f8f8;
-    border-right: 1px solid #e6e4e4;
-  }
-
   .fl-table tbody td {
     display: block;
     text-align: center;
+  }
+
+  .fl-table tr td:nth-child(odd) {
+    background: #f8f8f8;
+    border-right: 1px solid #e6e4e4;
   }
 }
