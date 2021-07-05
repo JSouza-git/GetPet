@@ -25,18 +25,13 @@
           <td><%= servico.duracao %></td>
           <td><%= servico.valor %></td>
           <td><%= servico.observacoes %></td>
-          <td><%= link_to 'Show', servico %></td>
-          <td><%= link_to 'Edit', edit_servico_path(servico) %></td>
-          <td><%= link_to 'Destroy', servico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Mostrar', servico %></td>
+          <td><%= link_to 'Editar', edit_servico_path(servico) %></td>
+          <td><%= link_to 'Remover', servico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
         <tr>
             <td><%= link_to 'Novo Serviço', new_servico_path %></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
         </tr>
     </tbody>
   </table>

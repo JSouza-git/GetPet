@@ -3,7 +3,7 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1 class="title-table">Cargos dos Usuários</h1>
+<h1 class="title-table">Agendamentos</h1>
 <div class="table-wrapper">
   <table class="fl-table">
     <thead>
@@ -20,23 +20,18 @@
     <tbody>
       <% @agendamentos.each do |agendamento| %>
         <tr>
-          <td><%= agendamento.pet_id %></td>
-          <td><%= agendamento.servico_id %></td>
-          <td><%= agendamento.usuario_id %></td>
+          <td><%= agendamento.pet.nome %></td>
+          <td><%= agendamento.servico.nome %></td>
+          <td><%= agendamento.usuario.nome %></td>
           <td><%= agendamento.data %></td>
           <td><%= agendamento.observacao %></td>
-          <td><%= link_to 'Show', agendamento %></td>
-          <td><%= link_to 'Edit', edit_agendamento_path(agendamento) %></td>
-          <td><%= link_to 'Destroy', agendamento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Mostrar', agendamento %></td>
+          <td><%= link_to 'Editar', edit_agendamento_path(agendamento) %></td>
+          <td><%= link_to 'Remover', agendamento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
       <tr>
         <td><%= link_to 'Novo Agendamento', new_agendamento_path %></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
       </tr>
     </tbody>
   </table>

@@ -118,12 +118,12 @@ input:hover {
   padding: 6px 12px;
   font-size: 12px;
   border-radius: 15%;
-  background-color: #807182;
+  background-color: #324960;
 }
 
 .actions input[type='submit']:hover{  
-  background-color: #9d7ba1;
-  color: #3d313f;
+  background-color: #1a2530;
+  color: white;
 }
 
 .text-darkyellow {
@@ -246,10 +246,10 @@ input:hover {
 
 /* Container */
 .container-content {
-  background-color: #F7B1AB;
+  background-color: #4FC3A1;
   color: inherit;
   padding: 15px 20px 20px 20px;
-  border-color: #807182;  
+  border-color: #324960;  
   border-image: none;
   border-style: solid solid none;
   border-width: 10px 0;
@@ -258,7 +258,7 @@ input:hover {
 
 /* Backgrounds */
 .main-bg {
-  background: #D8AA96;
+  background: white;
 }
 
 /* Login & Register Pages */

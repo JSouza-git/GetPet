@@ -3,7 +3,7 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1 class="title-table">Cargos dos Usuários</h1>
+<h1 class="title-table">Pets</h1>
 <div class="table-wrapper">
   <table class="fl-table">
     <thead>
@@ -28,19 +28,14 @@
           <td><%= pet.idade %></td>
           <td><%= pet.porte %></td>
           <td><%= pet.observacao %></td>
-          <td><%= pet.cliente_id %></td>
-          <td><%= link_to 'Show', pet %></td>
-          <td><%= link_to 'Edit', edit_pet_path(pet) %></td>
-          <td><%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= pet.cliente.nome %></td>
+          <td><%= link_to 'Mostrar', pet %></td>
+          <td><%= link_to 'Editar', edit_pet_path(pet) %></td>
+          <td><%= link_to 'Remover', pet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
       <tr>
         <td><%= link_to 'Novo Pet', new_pet_path %></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
       </tr>
     </tbody>
   </table>

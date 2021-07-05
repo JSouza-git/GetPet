@@ -19,18 +19,13 @@
         <tr>
           <td><%= usuario_cargo.usuario.nome %></td>
           <td><%= usuario_cargo.cargo.nome %></td>
-          <td><%= link_to 'Show', usuario_cargo %></td>
-          <td><%= link_to 'Edit', edit_usuario_cargo_path(usuario_cargo) %></td>
-          <td><%= link_to 'Destroy', usuario_cargo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Mostrar', usuario_cargo %></td>
+          <td><%= link_to 'Editar', edit_usuario_cargo_path(usuario_cargo) %></td>
+          <td><%= link_to 'Remover', usuario_cargo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
       <tr>
         <td><%= link_to 'Novo Cargo para o usuário', new_usuario_cargo_path %></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
