@@ -67,23 +67,23 @@ input:hover {
   font-size: 18px;
 }
 
-.field_with_errors{
+.field_with_errors {
   margin: auto;
 }
 
-#error_explanation{
+#error_explanation {
   margin: auto;
   width: 300px;
 }
 
-.button_to input[type='submit']{  
+.button_to input[type='submit'] {  
   padding: 4px 6px;
   font-size: 12px;
   border-radius: 15%;
   background-color: rgb(253, 96, 96);
 }
 
-.button_to input[type='submit']:hover{  
+.button_to input[type='submit']:hover {  
   background-color: rgb(255, 0, 0);
 }
 
@@ -114,7 +114,7 @@ input:hover {
   border: 1px solid #424242;
 }
 
-#user_current_password{
+#user_current_password {
   border-radius: 5px;
   margin-top: 10px;
   text-align: center;
@@ -243,7 +243,7 @@ input:hover {
 
 /* Container */
 .container-content {
-  background-color: #F7B1AB;
+  background-color: #f7b1ab;
   color: inherit;
   padding: 15px 20px 20px 20px;
   border-color: #807182;  
@@ -255,7 +255,7 @@ input:hover {
 
 /* Backgrounds */
 .main-bg {
-  background: #D8AA96;
+  background: #d8aa96;
 }
 
 /* Login & Register Pages */
