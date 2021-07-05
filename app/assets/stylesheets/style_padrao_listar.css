@@ -82,16 +82,6 @@ h2 {
     padding: 0 0 10px;
   }
 
-  .fl-table thead,
-  .fl-table tbody,
-  .fl-table thead th {
-    display: block;
-  }
-
-  .fl-table thead {
-    float: left;
-  }
-    
   .fl-table td,
   .fl-table th {
     padding: 20px 0.625em 0.625em 0.625em;
@@ -103,6 +93,16 @@ h2 {
     width: 120px;
     font-size: 13px;
     text-overflow: ellipsis;
+  }
+
+  .fl-table thead,
+  .fl-table tbody,
+  .fl-table thead th {
+    display: block;
+  }
+
+  .fl-table thead {
+    float: left;
   }
 
   .fl-table thead th {
@@ -124,21 +124,21 @@ h2 {
     display: table-cell;
   }
 
-  .fl-table tbody tr:nth-child(odd) {
-    background: none;
-  }
-
   .fl-table tr:nth-child(even) {
     background: transparent;
-  }
-
-  .fl-table tr td:nth-child(even) {
-    border-right: 1px solid #e6e4e4;
   }
 
   .fl-table tbody td {
     display: block;
     text-align: center;
+  }
+
+  .fl-table tbody tr:nth-child(odd) {
+    background: none;
+  }
+
+  .fl-table tr td:nth-child(even) {
+    border-right: 1px solid #e6e4e4;
   }
 
   .fl-table tr td:nth-child(odd) {
