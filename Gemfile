@@ -5,8 +5,6 @@ ruby '>=2.6.6'
 
 gem 'rspec'
 
-gem 'thin'
-
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.1'
@@ -33,13 +31,13 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
-  gem 'capybara', '>= 3.26'
-  # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'selenium-webdriver'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
+  gem 'capybara', '>= 3.26'
 end
 
 group :development do
