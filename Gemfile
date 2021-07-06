@@ -5,8 +5,6 @@ ruby '>=2.6.6'
 
 gem 'rspec'
 
-gem 'thin'
-
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.1'
@@ -33,34 +31,25 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
+  gem 'capybara', '>= 3.26'
+  # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'selenium-webdriver'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
 end
 
 group :development do
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
-  gem 'capybara', '>= 3.26'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 4.1.0'
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'rack-mini-profiler', '~> 2.0'
-  gem 'selenium-webdriver'
-  gem 'cucumber-rails', require: false
-  gem 'database_cleaner'
 end
 
 group :test do
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
-  # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 3.26'
-  gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end
