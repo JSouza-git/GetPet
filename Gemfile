@@ -5,6 +5,8 @@ ruby '>=2.6.6'
 
 gem 'rspec'
 
+gem 'thin'
+
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.1'
